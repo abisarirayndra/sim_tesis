@@ -20,4 +20,5 @@
 <link href="{{asset('dropzone')}}/dist/dropzone.css" rel="stylesheet">
 <link href="{{asset('dropzone')}}/dist/min/dropzone.min.css" rel="stylesheet">
 <link href="{{asset('dropzone')}}/dist/basic.css" rel="stylesheet">
-<link href="{{asset('dropzone')}}/dist/min/basic..min.css" rel="stylesheet">
+<link href="{{asset('dropzone')}}/dist/min/basic.min.css" rel="stylesheet">
+<link href="{{asset('template')}}/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
