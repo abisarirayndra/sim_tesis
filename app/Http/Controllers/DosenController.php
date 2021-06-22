@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use PDF;
+use App\Models\NilaiSidang;
+use RealRashid\SweetAlert\Facades\Alert;
+
 class DosenController extends Controller
 {
     /**
@@ -91,6 +94,12 @@ class DosenController extends Controller
     public function nilai()
     {
         return view('dosen.nilai');
+    }
+
+    public function upNilaiSidang(Request $request){
+        NilaiSidang::create($request->all());
+        Alert::toast('Input Nilai Sidang Berhasil', 'success');
+        return redirect()->back();
     }
 
     public function pdf_revisi()
