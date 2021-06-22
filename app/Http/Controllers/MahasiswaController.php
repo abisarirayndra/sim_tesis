@@ -81,6 +81,15 @@ class MahasiswaController extends Controller
         //
     }
 
+    public function bimbinganinput()
+    {
+        return view('mahasiswa.bimbinganinput');
+    }
+
+    public function bimbingan()
+    {
+        return view('mahasiswa.bimbingan');
+    }
 
     public function revisi()
     {
