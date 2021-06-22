@@ -12,31 +12,28 @@
                             <div class="p-5">
                                 <div class="text-center">
                                     <img src="{{asset('template')}}/img/undraw_profile.svg" alt="User Icon" width="80">
-                                    <h1 class="h4 text-gray-900 mt-4 mb-4">Registrasi Pra Tesis</h1>
+                                    <h1 class="h4 text-gray-900 mt-4 mb-4">SIM Tesis Login</h1>
                                 </div>
-                                <form class="user" method="POST" action="{{ route('reg') }}">
+                                <form class="user" method="POST" action="{{ route('log') }}">
                                     @csrf
                                     <div class="form-group">
-                                        <select name="role_id" class="form-control">
-                                            <option value="1" selected>Mahasiswa</option>
-                                            <option value="2">Dosen</option>
-                                            <option value="3">Admin S2</option>
-                                            <option value="4">Kalab</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" name="username" placeholder="Username">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" name="email"
+                                        <input type="email" class="form-control form-control-user" name="email"
                                             placeholder="Email Address">
                                     </div>
                                     <div class="form-group">
-                                        <input type="password" class="form-control" name="password"
+                                        <input type="password" class="form-control form-control-user" name="password"
                                                  placeholder="Password">
                                     </div>
-                                    <button class="btn btn-success btn-user btn-block" type="submit">Activate</button>
+                                    <button class="btn btn-success btn-user btn-block" type="submit">Login</button>
                                 </form>
+                                <hr>
+                                <div class="text-center">
+                                    <div class="small">Your account doesn't actived yet? <a class="text-primary" href="{{ route('register') }}">click here</a></div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="small">Forgot your password? <a class="text-primary" href="">click here</a></div>
+
+                                </div>
                             </div>
                         </div>
                     </div>

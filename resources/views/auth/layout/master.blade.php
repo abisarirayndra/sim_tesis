@@ -26,6 +26,7 @@
 </head>
 
 <body class="bg-gradient-primary">
+    @include('sweetalert::alert')
 
     @yield('content')
 
