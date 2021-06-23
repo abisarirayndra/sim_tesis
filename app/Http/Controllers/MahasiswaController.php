@@ -91,6 +91,11 @@ class MahasiswaController extends Controller
         return view('mahasiswa.bimbingan');
     }
 
+    public function sidang()
+    {
+        return view('mahasiswa.sidang');
+    }
+
     public function revisi()
     {
         return view('mahasiswa.revisi');

@@ -23,9 +23,16 @@
     <hr class="sidebar-divider my-0">
 
     <li class="nav-item">
-        <a class="nav-link" href="{{ route('mahasiswa.bimbingan')}}">
+        <a class="nav-link" href="{{route('mahasiswa.bimbingan')}}">
             <i class="fas fa-fw fa-edit"></i>
             <span>Bimbingan</span></a>
+
+        <hr class="sidebar-divider my-0">
+
+    <li class="nav-item">
+        <a class="nav-link" href="{{route('mahasiswa.sidang')}}">
+            <i class="fas fa-fw fa-edit"></i>
+            <span>Sidang</span></a>
 
         <hr class="sidebar-divider my-0">
 
