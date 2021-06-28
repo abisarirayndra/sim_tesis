@@ -85,6 +85,15 @@ class DosenController extends Controller
         //
     }
 
+    public function bimbingandetail()
+    {
+        return view('dosen.bimbingandetail');
+    }
+
+    public function bimbinganlist()
+    {
+        return view('dosen.bimbinganlist');
+    }
 
     public function verifikasi()
     {
@@ -96,7 +105,8 @@ class DosenController extends Controller
         return view('dosen.nilai');
     }
 
-    public function upNilaiSidang(Request $request){
+    public function upNilaiSidang(Request $request)
+    {
         NilaiSidang::create($request->all());
         Alert::toast('Input Nilai Sidang Berhasil', 'success');
         return redirect()->back();

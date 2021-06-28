@@ -3,7 +3,7 @@
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('dosen')}}">
         <div class="sidebar-brand-icon">
-        <img style="width: 60px; height: auto;" src="{{asset('foto')}}/its.png">
+            <img style="width: 60px; height: auto;" src="{{asset('foto')}}/its.png">
         </div>
         <div class="sidebar-brand-text mx-3">SIM TESIS</div>
     </a>
@@ -19,6 +19,14 @@
     </li>
 
     <!-- Divider -->
+    <hr class="sidebar-divider my-0">
+
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('dosen.bimbinganlist')}}">
+            <i class="fas fa-fw fa-check-circle"></i>
+            <span>Bimbingan</span></a>
+    </li>
+
     <hr class="sidebar-divider my-0">
 
     <li class="nav-item">
