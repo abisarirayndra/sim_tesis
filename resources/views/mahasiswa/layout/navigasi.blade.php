@@ -24,17 +24,27 @@
 
     <li class="nav-item">
         <a class="nav-link" href="{{route('mahasiswa.bimbingan')}}">
-            <i class="fas fa-fw fa-edit"></i>
+            <i class="fas fa-fw fa-bookmark"></i>
             <span>Bimbingan</span></a>
+    </li>
 
-        <hr class="sidebar-divider my-0">
+    <hr class="sidebar-divider my-0">
 
     <li class="nav-item">
         <a class="nav-link" href="{{route('mahasiswa.sidang')}}">
-            <i class="fas fa-fw fa-edit"></i>
-            <span>Sidang</span></a>
+            <i class="fas fa-fw fas fa-users"></i>
+            <span>Pendaftaran Sidang</span></a>
+    </li>
 
-        <hr class="sidebar-divider my-0">
+    <hr class="sidebar-divider my-0">
+
+    <li class="nav-item">
+        <a class="nav-link" href="{{route('mahasiswa.kehadiran')}}">
+            <i class="fas fa-fw fa-user-tie"></i>
+            <span>Kehadiran Sidang</span></a>
+    </li>
+
+    <hr class="sidebar-divider my-0">
 
     <li class="nav-item">
         <a class="nav-link" href="{{ route('mahasiswa.revisi')}}">
