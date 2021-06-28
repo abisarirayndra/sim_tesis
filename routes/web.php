@@ -48,6 +48,8 @@ Route::group(['middleware' => ['auth', 'mahasiswa-role']], function () {
     Route::get('/mahasiswa', [MahasiswaController::class, 'index'])->name('mahasiswa');
     Route::get('/mahasiswa/bimbinganinput', [MahasiswaController::class, 'bimbinganinput'])->name('mahasiswa.bimbinganinput');
     Route::get('/mahasiswa/bimbingan', [MahasiswaController::class, 'bimbingan'])->name('mahasiswa.bimbingan');
+    Route::get('/mahasiswa/sidang', [MahasiswaController::class, 'sidang'])->name('mahasiswa.sidang');
+    Route::get('/mahasiswa/kehadiran', [MahasiswaController::class, 'kehadiran'])->name('mahasiswa.kehadiran');
     Route::get('/mahasiswa/revisi', [MahasiswaController::class, 'revisi'])->name('mahasiswa.revisi');
     Route::get('/mahasiswa/yudisium', [MahasiswaController::class, 'yudisium'])->name('mahasiswa.yudisium');
     Route::get('/mahasiswa/wisuda', [MahasiswaController::class, 'wisuda'])->name('mahasiswa.wisuda');
@@ -56,6 +58,9 @@ Route::group(['middleware' => ['auth', 'mahasiswa-role']], function () {
 //Dosen
 Route::group(['middleware' => ['auth', 'dosen-role']], function () {
     Route::get('/dosen', [DosenController::class, 'index'])->name('dosen');
+    Route::get('/dosen/bimbingandetail', [DosenController::class, 'bimbingandetail'])->name('dosen.bimbingandetail');
+    Route::get('/dosen/bimbinganlist', [DosenController::class, 'bimbinganlist'])->name('dosen.bimbinganlist');
+    Route::get('/dosen/daftarsidang', [DosenController::class, 'daftarsidang'])->name('dosen.daftarsidang');
     Route::get('/dosen/verifikasi', [DosenController::class, 'verifikasi'])->name('dosen.verifikasi');
     Route::get('/dosen/nilai', [DosenController::class, 'nilai'])->name('dosen.nilai');
     Route::post('/dosen/upnilai', [DosenController::class, 'upNilaiSidang'])->name('dosen.upnilai');
