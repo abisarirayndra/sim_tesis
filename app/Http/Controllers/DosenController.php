@@ -90,6 +90,11 @@ class DosenController extends Controller
         return view('dosen.bimbingandetail');
     }
 
+    public function daftarsidang()
+    {
+        return view('dosen.daftarsidang');
+    }
+
     public function bimbinganlist()
     {
         return view('dosen.bimbinganlist');

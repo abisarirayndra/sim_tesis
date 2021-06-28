@@ -30,6 +30,14 @@
     <hr class="sidebar-divider my-0">
 
     <li class="nav-item">
+        <a class="nav-link" href="{{ route('dosen.daftarsidang')}}">
+            <i class="fas fa-fw fa-check-circle"></i>
+            <span>Pendaftaran Sidang</span></a>
+    </li>
+
+    <hr class="sidebar-divider my-0">
+
+    <li class="nav-item">
         <a class="nav-link" href="{{ route('dosen.verifikasi')}}">
             <i class="fas fa-fw fa-check-circle"></i>
             <span>Verifikasi Revisi</span></a>
