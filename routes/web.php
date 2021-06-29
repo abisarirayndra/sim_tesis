@@ -63,6 +63,7 @@ Route::group(['middleware' => ['auth', 'dosen-role']], function () {
     Route::get('/dosen/jadwalsidang', [DosenController::class, 'jadwalsidang'])->name('dosen.jadwalsidang');
     Route::get('/dosen/jadwalsidangdetail', [DosenController::class, 'jadwalsidangdetail'])->name('dosen.jadwalsidangdetail');
     Route::get('/dosen/daftarsidang', [DosenController::class, 'daftarsidang'])->name('dosen.daftarsidang');
+    Route::get('/dosen/sidang', [DosenController::class, 'sidang'])->name('dosen.sidang');
     Route::get('/dosen/verifikasi', [DosenController::class, 'verifikasi'])->name('dosen.verifikasi');
     Route::get('/dosen/nilai', [DosenController::class, 'nilai'])->name('dosen.nilai');
     Route::post('/dosen/upnilai', [DosenController::class, 'upNilaiSidang'])->name('dosen.upnilai');
