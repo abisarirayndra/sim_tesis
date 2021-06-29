@@ -28,7 +28,7 @@
                         <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Tanggal">
                     </div>
 
-                    <button href="bimbinganmahasiswaview" class="btn btn-primary">Add</button>
+                    <button href="" class="btn btn-primary">Add</button>
                 </form>
 
             </div>
