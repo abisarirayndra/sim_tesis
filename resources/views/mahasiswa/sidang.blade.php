@@ -13,31 +13,31 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-8">
-                <form action="" method="POST">
-
+                <form action="{{route('mahasiswa.daftarsidang') }}" method="post" enctype="multipart/form-data">
+                    @csrf
                     <div class="form-group">
                         <label for="Pembimbing">NRP</label>
-                        <input type="text" class="form-control" id="Pembimbing" placeholder="620602005">
+                        <input type="text" class="form-control" name="id_mahasiswa" placeholder="">
                     </div>
                     <div class="form-group">
                         <label for="Pembimbing">Nama</label>
-                        <input type="text" class="form-control" id="Pembimbing" placeholder="Nama">
+                        <input type="text" class="form-control" name="" placeholder="Nama">
                     </div>
                     <div class="form-group">
                         <label for="Pembimbing">Pembimbing 1</label>
-                        <input type="text" class="form-control" id="Pembimbing" placeholder="Pembimbing 1">
+                        <input type="text" class="form-control" name="id_pembimbing1" placeholder="Pembimbing 1">
                     </div>
                     <div class="form-group">
                         <label for="Pembimbing">Pembimbing 2</label>
-                        <input type="text" class="form-control" id="Pembimbing" placeholder="Pembimbing 2">
+                        <input type="text" class="form-control" name="id_pembimbing2" placeholder="Pembimbing 2">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Judul</label>
-                        <input type="text" class="form-control" id="Materi" placeholder="Judul">
+                        <input type="text" class="form-control" name="judul" placeholder="Judul">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Tanggal Sidang</label>
-                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Tanggal">
+                        <input type="text" class="form-control" name="" placeholder="Tanggal">
                     </div>
 
                     <button href="" class="btn btn-primary">Submit</button>

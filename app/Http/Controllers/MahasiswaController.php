@@ -2,7 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\DaftarSidang;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
+use Illuminate\Support\Facades\DB;
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
+use Auth;
+
+
 
 class MahasiswaController extends Controller
 {
@@ -93,7 +101,19 @@ class MahasiswaController extends Controller
 
     public function sidang()
     {
+        $userid = auth()->user()->id;
+        $user = DB::table('users')->where('id', '=', $userid)->first();
+        $sidang = DB::table('sidangs')->where('id_mahasiswa', '=', $userid)->first();
+
         return view('mahasiswa.sidang');
+        return view('mahasiswa.sidang')->with('data', $sidang, $user);
+    }
+
+    public function daftarSidang(Request $request)
+    {
+        DaftarSidang::create($request->all());
+        Alert::toast('Pendaftaran Sidang Berhasil', 'success');
+        return redirect()->back();
     }
 
     public function kehadiran()
