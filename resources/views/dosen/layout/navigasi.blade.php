@@ -23,7 +23,7 @@
 
     <li class="nav-item">
         <a class="nav-link" href="{{ route('dosen.bimbinganlist')}}">
-            <i class="fas fa-fw fa-check-circle"></i>
+            <i class="fas fa-fw fa-book"></i>
             <span>Bimbingan</span></a>
     </li>
 
@@ -31,7 +31,7 @@
 
     <li class="nav-item">
         <a class="nav-link" href="{{ route('dosen.daftarsidang')}}">
-            <i class="fas fa-fw fa-check-circle"></i>
+            <i class="fas fa-check"></i>
             <span>Pendaftaran Sidang</span></a>
     </li>
 
@@ -39,7 +39,7 @@
 
     <li class="nav-item">
         <a class="nav-link" href="{{ route('dosen.jadwalsidang')}}">
-            <i class="fas fa-fw fa-check-circle"></i>
+            <i class="fas fa-fw fa-calendar"></i>
             <span>Jadwal Sidang</span></a>
     </li>
 
@@ -48,7 +48,7 @@
 
     <li class="nav-item">
         <a class="nav-link" href="{{route('dosen.sidang')}}">
-            <i class="fas fa-fw fa-check-circle"></i>
+            <i class="fas fa-fw fa-user-check"></i>
             <span>Sidang</span></a>
     </li>
 
