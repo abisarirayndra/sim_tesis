@@ -554,6 +554,7 @@ class ComposerStaticInit1c15216abc33bda8b1f350761aca8317
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Models\\Admin' => __DIR__ . '/../..' . '/app/Models/Admin.php',
+        'App\\Models\\Bimbingan' => __DIR__ . '/../..' . '/app/Models/Bimbingan.php',
         'App\\Models\\DosenPembimbing' => __DIR__ . '/../..' . '/app/Models/DosenPembimbing.php',
         'App\\Models\\Mahasiswa' => __DIR__ . '/../..' . '/app/Models/Mahasiswa.php',
         'App\\Models\\NilaiSidang' => __DIR__ . '/../..' . '/app/Models/NilaiSidang.php',
