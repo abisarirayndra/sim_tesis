@@ -49,6 +49,8 @@ Route::group(['middleware' => ['auth', 'mahasiswa-role']], function () {
     Route::get('/mahasiswa/bimbinganinput', [MahasiswaController::class, 'bimbinganinput'])->name('mahasiswa.bimbinganinput');
     Route::get('/mahasiswa/bimbingan', [MahasiswaController::class, 'bimbingan'])->name('mahasiswa.bimbingan');
     Route::get('/mahasiswa/sidang', [MahasiswaController::class, 'sidang'])->name('mahasiswa.sidang');
+    Route::get('/mahasiswa/updatesidang', [MahasiswaController::class, 'updatesidang'])->name('mahasiswa.updatesidang');
+    Route::post('/mahasiswa/editsidang', [MahasiswaController::class, 'editsidang'])->name('mahasiswa.editsidang');
     Route::post('/mahasiswa/daftarsidang', [MahasiswaController::class, 'daftarSidang'])->name('mahasiswa.daftarsidang');
     Route::get('/mahasiswa/kehadiran', [MahasiswaController::class, 'kehadiran'])->name('mahasiswa.kehadiran');
     Route::get('/mahasiswa/revisi', [MahasiswaController::class, 'revisi'])->name('mahasiswa.revisi');

@@ -12,6 +12,8 @@ class DaftarSidang extends Model
     use HasFactory;
 
     protected $fillable = [
+        'nama',
+        'nrp',
         'id_mahasiswa',
         'id_pembimbing1',
         'id_pembimbing2',
