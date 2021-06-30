@@ -62,6 +62,11 @@
                             <option {{ old('id_pembimbing2') == $dosen->id ? "selected" : "" }} value="{{ $dosen->id }}">{{ $dosen->username }}</option>
                             @endforeach
                         </select>
+                        @error('id_pembimbing2')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                        @enderror
 
                     </div>
                     <div class="form-group">

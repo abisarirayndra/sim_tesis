@@ -127,7 +127,8 @@ class MahasiswaController extends Controller
             'nama' => 'required',
             'nrp' => 'required',
             'judul' => 'required',
-            'id_pembimbing1' => 'required'
+            'id_pembimbing1' => 'required',
+            'id_pembimbing2' => 'different:id_pembimbing1',
         ]);
 
         $sidang = DaftarSidang::find($request['id']);
@@ -149,7 +150,8 @@ class MahasiswaController extends Controller
             'nama' => 'required',
             'nrp' => 'required',
             'judul' => 'required',
-            'id_pembimbing1' => 'required'
+            'id_pembimbing1' => 'required',
+            'id_pembimbing2' => 'different:id_pembimbing1|nullable',
         ]);
 
 

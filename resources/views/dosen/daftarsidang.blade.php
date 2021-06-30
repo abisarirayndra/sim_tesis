@@ -21,6 +21,8 @@
                             <th>NRP</th>
                             <th>Name</th>
                             <th>Judul</th>
+                            <th>Pembimbing 1</th>
+                            <th>Pembimbing 2</th>
                             <th>Status</th>
                             <th>Action</th>
                         </tr>
@@ -29,6 +31,9 @@
                         <tr>
                             <th>NRP</th>
                             <th>Name</th>
+                            <th>Judul</th>
+                            <th>Pembimbing 1</th>
+                            <th>Pembimbing 2</th>
                             <th>Judul</th>
                             <th>Status</th>
                             <th>Action</th>
@@ -40,6 +45,14 @@
                             <th>{{ $sidang->nrp }}</th>
                             <td>{{ $sidang->nama }}</td>
                             <td>{{ $sidang->judul }}</td>
+                            <td>{{ $dosens->where('id', '=', $sidang->id_pembimbing1)->first()->username}}</td>
+                            <td>
+                                @if($sidang->id_pembimbing2)
+                                {{ $dosens->where('id', '=', $sidang->id_pembimbing2)->first()->username}}
+                                @else
+                                -
+                                @endif
+                            </td>
 
                             @if($sidang->verification_sidang)
                             <td><a style="color: green;">Approved</a></td>
