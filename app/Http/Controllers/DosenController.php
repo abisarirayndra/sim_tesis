@@ -7,6 +7,7 @@ use PDF;
 use App\Models\NilaiSidang;
 use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Support\Facades\DB;
+use App\Models\DaftarSidang;
 
 class DosenController extends Controller
 {
@@ -100,6 +101,21 @@ class DosenController extends Controller
 
         //return view('dosen.daftarsidang');
         return view('dosen.daftarsidang')->with('userid', $userid)->with('sidangs', $sidang)->with('dosens', $dosen);
+    }
+    public function approvesidang($id)
+    {
+        $sidang = DaftarSidang::find($id);
+        $sidang['verification_sidang'] = true;
+        $sidang->save();
+        return $this->daftarsidang();
+    }
+
+    public function rejectsidang($id)
+    {
+        $sidang = DaftarSidang::find($id);
+        $sidang['verification_sidang'] = false;
+        $sidang->save();
+        return $this->daftarsidang();
     }
 
     public function bimbinganlist()

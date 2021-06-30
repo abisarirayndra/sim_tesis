@@ -51,11 +51,8 @@
                             @endif
 
                             <td>
-                                <a href="{{ route('dosen.daftarsidang')}}" class="btn btn-success">Approve</a>
-                                <form action="" class="d-inline" method="DELETE">
-                                    <input type="hidden" name="Id" value="">
-                                    <button type="submit" href="" class="btn btn-danger" onclick="return confirm('Are you sure?')">Reject</button>
-                                </form>
+                                <a href="{{ route('dosen.approvesidang',['id'=>$sidang->id] )}}" class="btn btn-success">Approve</a>
+                                <a href="{{ route('dosen.rejectsidang',['id'=>$sidang->id] )}}" class="btn btn-danger" onclick="return confirm('Are you sure?')">Reject</button>
                             </td>
                         </tr>
                         @endforeach
