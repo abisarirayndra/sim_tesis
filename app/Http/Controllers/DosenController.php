@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use PDF;
 use App\Models\NilaiSidang;
 use RealRashid\SweetAlert\Facades\Alert;
+use Illuminate\Support\Facades\DB;
 
 class DosenController extends Controller
 {
@@ -92,7 +93,13 @@ class DosenController extends Controller
 
     public function daftarsidang()
     {
-        return view('dosen.daftarsidang');
+        $userid = auth()->user()->id;
+        $user = DB::table('users')->where('id', '=', $userid)->first();
+        $sidang = DB::table('sidangs')->where('id_pembimbing1', '=', $userid)->orWhere('id_pembimbing2', '=', $userid)->get();
+        $dosen = DB::table('users')->where('role_id', '=', 2)->get();
+
+        //return view('dosen.daftarsidang');
+        return view('dosen.daftarsidang')->with('userid', $userid)->with('sidangs', $sidang)->with('dosens', $dosen);
     }
 
     public function bimbinganlist()

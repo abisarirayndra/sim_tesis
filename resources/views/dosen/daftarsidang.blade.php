@@ -35,37 +35,21 @@
                         </tr>
                     </tfoot>
                     <tbody>
+                        @foreach ($sidangs as $sidang)
                         <tr>
-                            <th>6026202005</th>
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
-                            <td><a style="color: rgb(255, 196, 0);">Waiting Approval</a></td>
-                            <td>
-                                <a href="{{ route('dosen.daftarsidang')}}" class="btn btn-success">Approve</a>
-                                <form action="" class="d-inline" method="DELETE">
-                                    <input type="hidden" name="Id" value="">
-                                    <button type="submit" href="" class="btn btn-danger" onclick="return confirm('Are you sure?')">Reject</button>
-                                </form>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>6026202006</th>
-                            <td>Garrett Winters</td>
-                            <td>Accountant</td>
-                            <td><a style="color: red;">Rejected</a></td>
-                            <td>
-                                <a href="{{ route('dosen.daftarsidang')}}" class="btn btn-success">Approve</a>
-                                <form action="" class="d-inline" method="DELETE">
-                                    <input type="hidden" name="Id" value="">
-                                    <button type="submit" href="" class="btn btn-danger" onclick="return confirm('Are you sure?')">Reject</button>
-                                </form>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>6026202007</th>
-                            <td>Ashton Cox</td>
-                            <td>Junior Technical Author</td>
+                            <th>{{ $sidang->nrp }}</th>
+                            <td>{{ $sidang->nama }}</td>
+                            <td>{{ $sidang->judul }}</td>
+
+                            @if($sidang->verification_sidang)
                             <td><a style="color: green;">Approved</a></td>
+                            @elseif($sidang->verification_sidang===null)
+                            <td><a style="color: rgb(255, 196, 0);">Waiting Approval</a></td>
+
+                            @else
+                            <td><a style="color: red;">Rejected</a></td>
+                            @endif
+
                             <td>
                                 <a href="{{ route('dosen.daftarsidang')}}" class="btn btn-success">Approve</a>
                                 <form action="" class="d-inline" method="DELETE">
@@ -74,6 +58,8 @@
                                 </form>
                             </td>
                         </tr>
+                        @endforeach
+
 
                     </tbody>
                 </table>
