@@ -109,4 +109,11 @@ class DosenController extends Controller
         $pdf = PDF::loadView('/dosen/pdf_revisi', $data);
         return $pdf->stream('file_revisi.pdf');
     }
+
+    public function verifMinat(){
+        return view('dosen.verifminat');
+    }
+    public function verifPengesahan(){
+        return view('dosen.verifpengesahan');
+    }
 }

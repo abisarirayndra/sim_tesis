@@ -22,6 +22,38 @@
     <hr class="sidebar-divider my-0">
 
     <li class="nav-item">
+        <a class="nav-link" href="{{ route('mahasiswa.pratesis')}}">
+            <i class="fas fa-fw fa-book"></i>
+            <span>Registrasi Pra Tesis</span></a>
+    </li>
+
+    <hr class="sidebar-divider my-0">
+
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('mahasiswa.frs')}}">
+            <i class="fas fa-fw fa-book"></i>
+            <span>Upload FRS</span></a>
+    </li>
+
+    <hr class="sidebar-divider my-0">
+
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('mahasiswa.minat')}}">
+            <i class="fas fa-fw fa-book"></i>
+            <span>Pilih Minat, Topik, Dospem</span></a>
+    </li>
+
+    <hr class="sidebar-divider my-0">
+
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('mahasiswa.pengesahan')}}">
+            <i class="fas fa-fw fa-book"></i>
+            <span>Upload Bukti Pengesahan</span></a>
+    </li>
+
+    <hr class="sidebar-divider my-0">
+
+    <li class="nav-item">
         <a class="nav-link" href="{{ route('mahasiswa.revisi')}}">
             <i class="fas fa-fw fa-edit"></i>
             <span>Revisi Sidang Tesis</span></a>
