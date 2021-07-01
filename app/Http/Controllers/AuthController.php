@@ -71,4 +71,24 @@ class AuthController extends Controller
         Alert::toast('Kamu Berhasil Keluar', 'success');
         return redirect()->route('login');
    }
+
+   public function reset(){
+       return view('auth.reset');
+   }
+
+   public function upReset(Request $request){
+       $user = User::where('username', $request->username)->where('email', $request->email)->first();
+
+       if(isset($user)){
+           $user->update([
+                'password' => Hash::make($request->password),
+           ]);
+           Alert::toast('Update password berhasil', 'success');
+           return redirect()->route('login');
+       }
+       else{
+           Alert::error('Gagal','Akun Tidak Ditemukan');
+           return redirect()->back();
+       }
+   }
 }
