@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use PDF;
 use App\Models\NilaiSidang;
 use RealRashid\SweetAlert\Facades\Alert;
+use Illuminate\Support\Facades\DB;
+use App\Models\DaftarSidang;
 
 class DosenController extends Controller
 {
@@ -92,12 +94,48 @@ class DosenController extends Controller
 
     public function daftarsidang()
     {
-        return view('dosen.daftarsidang');
+        $userid = auth()->user()->id;
+        $user = DB::table('users')->where('id', '=', $userid)->first();
+        $sidang = DB::table('sidangs')->where('id_pembimbing1', '=', $userid)->orWhere('id_pembimbing2', '=', $userid)->get();
+        $dosen = DB::table('users')->where('role_id', '=', 2)->get();
+
+        //return view('dosen.daftarsidang');
+        return view('dosen.daftarsidang')->with('userid', $userid)->with('sidangs', $sidang)->with('dosens', $dosen);
+    }
+    public function approvesidang($id)
+    {
+        $sidang = DaftarSidang::find($id);
+        $sidang['verification_sidang'] = true;
+        $sidang->save();
+        return $this->daftarsidang();
+    }
+
+    public function rejectsidang($id)
+    {
+        $sidang = DaftarSidang::find($id);
+        $sidang['verification_sidang'] = false;
+        $sidang->save();
+        return $this->daftarsidang();
     }
 
     public function bimbinganlist()
     {
         return view('dosen.bimbinganlist');
+    }
+
+    public function jadwalsidang()
+    {
+        return view('dosen.jadwalsidang');
+    }
+
+    public function sidang()
+    {
+        return view('dosen.sidang');
+    }
+
+    public function jadwalsidangdetail()
+    {
+        return view('dosen.jadwalsidangdetail');
     }
 
     public function verifikasi()

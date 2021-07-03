@@ -2,7 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\DaftarSidang;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
+
+
 
 class MahasiswaController extends Controller
 {
@@ -93,7 +99,65 @@ class MahasiswaController extends Controller
 
     public function sidang()
     {
-        return view('mahasiswa.sidang');
+        $userid = auth()->user()->id;
+        $user = DB::table('users')->where('id', '=', $userid)->first();
+        $sidang = DB::table('sidangs')->where('id_mahasiswa', '=', $userid)->first();
+        $dosen = DB::table('users')->where('role_id', '=', 2)->get();
+        if ($sidang) {
+            return view('mahasiswa.sidangview', ['dosens' => $dosen])->with('userid', $userid)->with('sidang', $sidang);
+        }
+        return view('mahasiswa.sidang', ['dosens' => $dosen])->with('userid', $userid)->with('sidang', $sidang);
+    }
+
+    public function updatesidang()
+    {
+        $userid = auth()->user()->id;
+        $user = DB::table('users')->where('id', '=', $userid)->first();
+        $sidang = DB::table('sidangs')->where('id_mahasiswa', '=', $userid)->first();
+        $dosen = DB::table('users')->where('role_id', '=', 2)->get();
+
+        return view('mahasiswa.updatesidang', ['dosens' => $dosen])->with('userid', $userid)->with('sidang', $sidang);
+    }
+
+    public function editsidang(Request $request)
+    {
+
+
+        $this->validate($request, [
+            'nama' => 'required',
+            'nrp' => 'required',
+            'judul' => 'required',
+            'id_pembimbing1' => 'required',
+            'id_pembimbing2' => 'different:id_pembimbing1',
+        ]);
+
+        $sidang = DaftarSidang::find($request['id']);
+        $sidang['nrp'] = $request['nrp'];
+        $sidang['nama'] = $request['nama'];
+        $sidang['id_pembimbing1'] = $request['id_pembimbing1'];
+        $sidang['id_pembimbing2'] = $request['id_pembimbing2'];
+        $sidang['judul'] = $request['judul'];
+        $sidang->save();
+
+        Alert::toast('Update Data Sidang Berhasil', 'success');
+        return $this->sidang();
+    }
+
+
+    public function daftarSidang(Request $request)
+    {
+        $this->validate($request, [
+            'nama' => 'required',
+            'nrp' => 'required',
+            'judul' => 'required',
+            'id_pembimbing1' => 'required',
+            'id_pembimbing2' => 'different:id_pembimbing1|nullable',
+        ]);
+
+
+        DaftarSidang::create($request->all());
+        Alert::toast('Pendaftaran Sidang Berhasil', 'success');
+        return redirect()->back();
     }
 
     public function kehadiran()

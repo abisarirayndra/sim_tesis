@@ -44,7 +44,7 @@
                             <td>Bab 1 tulisan masih jelek</td>
                             <td><a style="color: red;">Waiting Approval</a></td>
                             <td>
-                                <a href="bimbinganmahasiswaupdate.html" class="btn btn-warning">Update</a>
+                                <a href="{{ route('mahasiswa.bimbinganinput')}}" class="btn btn-warning">Update</a>
                                 <form action="" class="d-inline" method="DELETE">
                                     <input type="hidden" name="Id" value="">
                                     <button type="submit" href="" class="btn btn-danger" onclick="return confirm('Are you sure?')">Delete</button>
@@ -57,7 +57,7 @@
                             <td>Bab 1 tulisan masih jelek</td>
                             <td><a style="color: red;">Waiting Approval</a></td>
                             <td>
-                                <a href="bimbinganmahasiswaupdate.html" class="btn btn-warning">Update</a>
+                                <a href="{{ route('mahasiswa.bimbinganinput')}}" class="btn btn-warning">Update</a>
                                 <form action="" class="d-inline" method="DELETE">
                                     <input type="hidden" name="Id" value="">
                                     <button type="submit" href="" class="btn btn-danger" onclick="return confirm('Are you sure?')">Delete</button>
