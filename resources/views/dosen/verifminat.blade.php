@@ -1,4 +1,4 @@
-@extends('dosen`.layout.index')
+@extends('dosen.layout.index')
 
 @section('content')
 <div class="row">
