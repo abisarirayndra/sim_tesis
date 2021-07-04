@@ -28,6 +28,8 @@ Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::get('/', [AuthController::class, 'login'])->name('login');
 Route::post('/log', [AuthController::class, 'log'])->name('log');
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+Route::get('/reset', [AuthController::class, 'reset'])->name('reset');
+Route::post('/upreset', [AuthController::class, 'upReset'])->name('upreset');
 
 
 
@@ -56,6 +58,10 @@ Route::group(['middleware' => ['auth', 'mahasiswa-role']], function () {
     Route::get('/mahasiswa/revisi', [MahasiswaController::class, 'revisi'])->name('mahasiswa.revisi');
     Route::get('/mahasiswa/yudisium', [MahasiswaController::class, 'yudisium'])->name('mahasiswa.yudisium');
     Route::get('/mahasiswa/wisuda', [MahasiswaController::class, 'wisuda'])->name('mahasiswa.wisuda');
+    Route::get('/mahasiswa/minat', [MahasiswaController::class, 'minat'])->name('mahasiswa.minat');
+    Route::get('/mahasiswa/pengesahan', [MahasiswaController::class, 'pengesahan'])->name('mahasiswa.pengesahan');
+    Route::get('/mahasiswa/pratesis', [MahasiswaController::class, 'pratesis'])->name('mahasiswa.pratesis');
+    Route::get('/mahasiswa/frs', [MahasiswaController::class, 'frs'])->name('mahasiswa.frs');
 });
 
 //Dosen
@@ -73,6 +79,8 @@ Route::group(['middleware' => ['auth', 'dosen-role']], function () {
     Route::get('/dosen/nilai', [DosenController::class, 'nilai'])->name('dosen.nilai');
     Route::post('/dosen/upnilai', [DosenController::class, 'upNilaiSidang'])->name('dosen.upnilai');
     Route::get('/dosen/verifikasi/file_revisi.pdf', [DosenController::class, 'pdf_revisi']);
+    Route::get('/dosen/verifminat', [DosenController::class, 'verifMinat'])->name('dosen.verifminat');
+    Route::get('/dosen/verifpengesahan', [DosenController::class, 'verifPengesahan'])->name('dosen.verifpengesahan');
 });
 
 // Kalab

@@ -22,6 +22,22 @@
     <hr class="sidebar-divider my-0">
 
     <li class="nav-item">
+        <a class="nav-link" href="{{ route('dosen.verifminat')}}">
+            <i class="fas fa-fw fa-check-circle"></i>
+            <span>Verifikasi Minat</span></a>
+    </li>
+
+    <hr class="sidebar-divider my-0">
+
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('dosen.verifpengesahan')}}">
+            <i class="fas fa-fw fa-check-circle"></i>
+            <span>Verifikasi Bukti Pengesahan</span></a>
+    </li>
+
+    <hr class="sidebar-divider my-0">
+
+    <li class="nav-item">
         <a class="nav-link" href="{{ route('dosen.bimbinganlist')}}">
             <i class="fas fa-fw fa-book"></i>
             <span>Bimbingan</span></a>

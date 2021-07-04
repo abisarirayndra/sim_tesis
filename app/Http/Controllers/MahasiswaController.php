@@ -178,4 +178,18 @@ class MahasiswaController extends Controller
     {
         return view('mahasiswa.wisuda');
     }
+
+    public function minat(){
+        return view('mahasiswa.minat');
+    }
+
+    public function pengesahan(){
+        return view('mahasiswa.pengesahan');
+    }
+    public function pratesis(){
+        return view('mahasiswa.pratesis');
+    }
+    public function frs(){
+        return view('mahasiswa.frs');
+    }
 }

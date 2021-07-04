@@ -12,28 +12,30 @@
                             <div class="p-5">
                                 <div class="text-center">
                                     <img src="{{asset('template')}}/img/undraw_profile.svg" alt="User Icon" width="80">
-                                    <h1 class="h4 text-gray-900 mt-4 mb-4">SIM Tesis Login</h1>
+                                    <h1 class="h4 text-gray-900 mt-4 mb-4">Reset Password</h1>
                                 </div>
-                                <form class="user" method="POST" action="{{ route('log') }}">
+                                <form class="user" method="POST" action="{{ route('upreset') }}">
                                     @csrf
+                                    <div class="form-group">
+                                        <input type="text" class="form-control form-control-user" name="username" placeholder="Username">
+                                    </div>
                                     <div class="form-group">
                                         <input type="email" class="form-control form-control-user" name="email"
                                             placeholder="Email Address">
                                     </div>
                                     <div class="form-group">
                                         <input type="password" class="form-control form-control-user" name="password"
-                                                 placeholder="Password">
+                                                 placeholder="New Password">
                                     </div>
-                                    <button class="btn btn-success btn-user btn-block" type="submit">Login</button>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control form-control-user"
+                                                 placeholder="Enter Again Your New Password">
+                                    </div>
+                                    <div class="text-center">
+                                        <a href="{{ route('login') }}" class="btn btn-danger btn-user">Cancel</a>
+                                        <button class="btn btn-success btn-user" type="submit">Update</button>
+                                    </div>
                                 </form>
-                                <hr>
-                                <div class="text-center">
-                                    <div class="small">Your account doesn't actived yet? <a class="text-primary" href="{{ route('register') }}">click here</a></div>
-                                </div>
-                                <div class="text-center">
-                                    <div class="small">Forgot your password? <a class="text-primary" href="{{ route('reset') }}">click here</a></div>
-
-                                </div>
                             </div>
                         </div>
                     </div>
