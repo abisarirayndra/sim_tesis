@@ -1,4 +1,4 @@
-@extends('dosen.layout.index')
+@extends('admin.layout.index')
 
 @section('content')
 <div class="container-fluid">
@@ -46,7 +46,7 @@
                             <td>Parman</td>
                             <td>Rahmat</td>
                             <td>10/01/2020 Sesi 1</td>
-                            <td><a href="{{ route('dosen.jadwalsidangdetail')}}" class="btn btn-success">Detail</a></td>
+                            <td><a href="{{ route('admin.jadwalsidangdetail')}}" class="btn btn-success">Detail</a></td>
                         </tr>
                         <tr>
                             <th>6026202006</th>
@@ -55,7 +55,7 @@
                             <td>Aulia</td>
                             <td>-</td>
                             <td>10/01/2020 Sesi 2</td>
-                            <td><a href="{{ route('dosen.jadwalsidangdetail')}}" class="btn btn-success">Detail</a></td>
+                            <td><a href="{{ route('admin.jadwalsidangdetail')}}" class="btn btn-success">Detail</a></td>
                         </tr>
                         <tr>
                             <th>6026202007</th>
@@ -64,7 +64,7 @@
                             <td>Rahmat</td>
                             <td>-</td>
                             <td>10/01/2020 Sesi 3</td>
-                            <td><a href="{{ route('dosen.jadwalsidangdetail')}}" class="btn btn-success">Detail</a></td>
+                            <td><a href="{{ route('admin.jadwalsidangdetail')}}" class="btn btn-success">Detail</a></td>
                         </tr>
 
                     </tbody>

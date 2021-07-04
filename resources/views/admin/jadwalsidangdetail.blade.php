@@ -1,4 +1,4 @@
-@extends('dosen.layout.index')
+@extends('admin.layout.index')
 
 @section('content')
 <div class="container-fluid">
@@ -8,7 +8,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-8">
-                <form action="penjadwalansidang.html" method="POST">
+                <form action="{{ route('admin.jadwalsidang')}}">
 
                     <div class="form-group">
                         <label for="Pembimbing">NRP</label>
