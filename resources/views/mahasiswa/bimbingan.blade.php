@@ -41,7 +41,7 @@
                         <tr>
                             <td>01/01/2001</td>
                             <td>Rahmat</td>
-                            <td>Bab 1 tulisan masih jelek</td>
+                            <td>Bab 1 Masih kurang detail</td>
                             <td><a style="color: red;">Waiting Approval</a></td>
                             <td>
                                 <a href="{{ route('mahasiswa.bimbinganinput')}}" class="btn btn-warning">Update</a>
@@ -54,7 +54,7 @@
                         <tr>
                             <td>01/01/2001</td>
                             <td>Rahmat</td>
-                            <td>Bab 1 tulisan masih jelek</td>
+                            <td>Bab 1 Masih kurang detail</td>
                             <td><a style="color: red;">Waiting Approval</a></td>
                             <td>
                                 <a href="{{ route('mahasiswa.bimbinganinput')}}" class="btn btn-warning">Update</a>
@@ -67,7 +67,7 @@
                         <tr>
                             <td>01/01/2001</td>
                             <td>Rahmat</td>
-                            <td>Bab 1 tulisan masih jelek</td>
+                            <td>Bab 1 Masih kurang detail</td>
                             <td><a style="color: green;">Approved</a></td>
                             <td>-</td>
                         </tr>
