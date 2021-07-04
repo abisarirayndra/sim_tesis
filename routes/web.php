@@ -38,7 +38,8 @@ Route::group(['middleware' => ['auth', 'admin-role']], function () {
     Route::get('/admin/sk_yudisium', [AdminController::class, 'sk_yudisium'])->name('admin.sk_yudisium');
     Route::get('/admin/verif_wisuda', [AdminController::class, 'verifikasi_wisuda'])->name('admin.verif_wisuda');
     Route::get('/admin/sk_wisuda', [AdminController::class, 'sk_wisuda'])->name('admin.sk_wisuda');
-
+    Route::get('/admin/jadwalsidang', [AdminController::class, 'jadwalsidang'])->name('admin.jadwalsidang');
+    Route::get('/admin/jadwalsidangdetail', [AdminController::class, 'jadwalsidangdetail'])->name('admin.jadwalsidangdetail');
     Route::get('/admin/verif_yudisium/kelengkapan_yudisium.pdf', [AdminController::class, 'pdf_yudisium']);
     Route::get('/admin/verif_wisuda/kelengkapan_wisuda.pdf', [AdminController::class, 'pdf_wisuda']);
 });
@@ -63,8 +64,6 @@ Route::group(['middleware' => ['auth', 'dosen-role']], function () {
     Route::get('/dosen', [DosenController::class, 'index'])->name('dosen');
     Route::get('/dosen/bimbingandetail', [DosenController::class, 'bimbingandetail'])->name('dosen.bimbingandetail');
     Route::get('/dosen/bimbinganlist', [DosenController::class, 'bimbinganlist'])->name('dosen.bimbinganlist');
-    Route::get('/dosen/jadwalsidang', [DosenController::class, 'jadwalsidang'])->name('dosen.jadwalsidang');
-    Route::get('/dosen/jadwalsidangdetail', [DosenController::class, 'jadwalsidangdetail'])->name('dosen.jadwalsidangdetail');
     Route::get('/dosen/daftarsidang', [DosenController::class, 'daftarsidang'])->name('dosen.daftarsidang');
     Route::get('/dosen/sidang', [DosenController::class, 'sidang'])->name('dosen.sidang');
     Route::get('/dosen/approvesidang/{id}', [DosenController::class, 'approvesidang'])->name('dosen.approvesidang');

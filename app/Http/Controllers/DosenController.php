@@ -123,19 +123,9 @@ class DosenController extends Controller
         return view('dosen.bimbinganlist');
     }
 
-    public function jadwalsidang()
-    {
-        return view('dosen.jadwalsidang');
-    }
-
     public function sidang()
     {
         return view('dosen.sidang');
-    }
-
-    public function jadwalsidangdetail()
-    {
-        return view('dosen.jadwalsidangdetail');
     }
 
     public function verifikasi()

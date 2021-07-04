@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use PDF;
+
 class AdminController extends Controller
 {
     /**
@@ -82,6 +83,16 @@ class AdminController extends Controller
         //
     }
 
+    public function jadwalsidang()
+    {
+        return view('admin.jadwalsidang');
+    }
+
+    public function jadwalsidangdetail()
+    {
+        return view('admin.jadwalsidangdetail');
+    }
+
     public function verifikasi_yudisium()
     {
         return view('admin.verifikasi_yudisium');
@@ -117,7 +128,4 @@ class AdminController extends Controller
         $pdf = PDF::loadView('/admin/pdf_wisuda', $data);
         return $pdf->stream('kelengkapan_wisuda.pdf');
     }
-
-
-
 }
